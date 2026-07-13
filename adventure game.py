@@ -1,148 +1,147 @@
-# =====================================================
-# Adventure Game: The Lost Temple
-# Author: Evelyn Sunday Akpan
+# ==========================================================
+# W03 Project: Adventure Game
+# Author: Evelyn Akpan
 #
 # Description:
-# This is a text-based adventure game where the player
-# explores a mysterious temple in search of a legendary
-# crystal. Every path has three levels of choices, and
-# different choices lead to different endings.
+# In this adventure game, you are searching for the legendary
+# Crystal of Destiny. Every decision changes your journey,
+# leading to different adventures and endings.
 #
 # Creativity:
-# - More than two choices in the first scenario.
-# - Multiple unique endings.
-# - Case-insensitive user input using .lower().
-# =====================================================
+# I added three different starting paths, multiple winning
+# endings, and several unique game-over endings to make the
+# adventure more exciting and replayable.
+# ==========================================================
 
-print("=====================================")
-print("     THE LOST TEMPLE ADVENTURE")
-print("=====================================")
-print("You are an explorer searching for the legendary Crystal of Light.")
-print("You arrive at the entrance of an ancient temple.")
+print("========================================")
+print("     THE QUEST FOR THE CRYSTAL")
+print("========================================")
+print("You are an explorer searching for the legendary Crystal of Destiny.")
+print("Your journey begins at the edge of a mysterious land.\n")
 
-choice1 = input("\nDo you enter through the FRONT, SIDE, or BACK entrance? ").lower()
+choice1 = input("Do you travel through the FOREST, CAVE, or RIVER? ").lower()
 
-# ------------------ FRONT ------------------
-if choice1 == "front":
-    print("\nYou walk through the front entrance and see two stairways.")
+# ---------------- FOREST ----------------
+if choice1 == "forest":
+    print("\nYou enter the forest and hear strange sounds.")
 
-    choice2 = input("Do you go UPSTAIRS or DOWNSTAIRS? ").lower()
+    choice2 = input("Do you FOLLOW the sound or CLIMB a tree? ").lower()
 
-    if choice2 == "upstairs":
-        print("\nUpstairs you find a sleeping dragon guarding a treasure.")
+    if choice2 == "follow":
+        print("\nYou discover a wounded unicorn.")
 
-        choice3 = input("Do you FIGHT the dragon or SNEAK past it? ").lower()
+        choice3 = input("Do you HELP the unicorn or LEAVE it? ").lower()
 
-        if choice3 == "fight":
-            print("\nThe dragon is too powerful. You fought bravely but lost.")
-            print("GAME OVER!")
-        elif choice3 == "sneak":
-            print("\nYou quietly sneak past the dragon and claim the Crystal!")
+        if choice3 == "help":
+            print("\nThe unicorn rewards you with the Crystal of Destiny.")
             print("Congratulations! YOU WIN!")
-        else:
-            print("\nInvalid choice. The dragon wakes up and chases you away.")
-            print("GAME OVER!")
-
-    elif choice2 == "downstairs":
-        print("\nDownstairs you discover a flooded tunnel.")
-
-        choice3 = input("Do you SWIM across or BUILD a raft? ").lower()
-
-        if choice3 == "swim":
-            print("\nYou safely swim across and discover hidden treasure!")
-            print("YOU WIN!")
-        elif choice3 == "build":
-            print("\nYour raft falls apart and you drift out of the temple.")
+        elif choice3 == "leave":
+            print("\nThe forest becomes cursed and you cannot escape.")
             print("GAME OVER!")
         else:
-            print("\nInvalid choice. You become trapped in the tunnel.")
+            print("\nInvalid choice. The unicorn disappears.")
             print("GAME OVER!")
 
-    else:
-        print("\nInvalid choice. You get lost inside the temple.")
-        print("GAME OVER!")
+    elif choice2 == "climb":
+        print("\nFrom the top of the tree, you spot an old rope bridge.")
 
-# ------------------ SIDE ------------------
-elif choice1 == "side":
-    print("\nYou enter through the side entrance and find a mysterious garden.")
-
-    choice2 = input("Do you PICK a flower or FOLLOW a glowing butterfly? ").lower()
-
-    if choice2 == "pick":
-        print("\nThe flower releases sleeping gas.")
-
-        choice3 = input("Do you WAIT or RUN? ").lower()
-
-        if choice3 == "wait":
-            print("\nThe gas disappears, and you safely continue to the treasure.")
-            print("YOU WIN!")
-        elif choice3 == "run":
-            print("\nYou trip and fall into a hidden pit.")
-            print("GAME OVER!")
-        else:
-            print("\nInvalid choice. You fall asleep forever.")
-            print("GAME OVER!")
-
-    elif choice2 == "follow":
-        print("\nThe butterfly leads you to a magical bridge.")
-
-        choice3 = input("Do you CROSS the bridge or TURN BACK? ").lower()
+        choice3 = input("Do you CROSS the bridge or GO BACK? ").lower()
 
         if choice3 == "cross":
-            print("\nThe bridge leads directly to the Crystal of Light.")
+            print("\nYou safely cross and discover the hidden Crystal.")
             print("YOU WIN!")
-        elif choice3 == "turn back":
-            print("\nYou leave the temple safely, but without the treasure.")
+        elif choice3 == "go back":
+            print("\nYou become lost in the forest forever.")
             print("GAME OVER!")
         else:
-            print("\nInvalid choice. The bridge disappears.")
+            print("\nInvalid choice. You fall from the tree.")
             print("GAME OVER!")
 
     else:
-        print("\nInvalid choice. Thorny vines trap you.")
+        print("\nInvalid choice. The forest spirits send you home.")
         print("GAME OVER!")
 
-# ------------------ BACK ------------------
-elif choice1 == "back":
-    print("\nThe back entrance leads to a dark cave.")
+# ---------------- CAVE ----------------
+elif choice1 == "cave":
+    print("\nThe cave is dark and cold.")
 
     choice2 = input("Do you LIGHT a torch or WALK in the dark? ").lower()
 
     if choice2 == "light":
-        print("\nThe torch reveals an old wizard.")
+        print("\nThe light reveals an ancient wizard.")
 
         choice3 = input("Do you TALK to the wizard or IGNORE him? ").lower()
 
         if choice3 == "talk":
-            print("\nThe wizard gives you a magic key to unlock the Crystal.")
+            print("\nThe wizard gives you the Crystal of Destiny.")
             print("YOU WIN!")
         elif choice3 == "ignore":
-            print("\nWithout the wizard's help, you cannot open the treasure room.")
+            print("\nWithout the wizard's help, you cannot escape the cave.")
             print("GAME OVER!")
         else:
             print("\nInvalid choice. The wizard disappears.")
             print("GAME OVER!")
 
     elif choice2 == "walk":
-        print("\nYou hear strange noises in the darkness.")
+        print("\nYou hear footsteps behind you.")
 
-        choice3 = input("Do you KEEP WALKING or GO BACK? ").lower()
+        choice3 = input("Do you RUN or HIDE? ").lower()
 
-        if choice3 == "keep walking":
-            print("\nYou fall into a deep hole.")
+        if choice3 == "run":
+            print("\nYou escape safely, but without the Crystal.")
             print("GAME OVER!")
-        elif choice3 == "go back":
-            print("\nYou safely escape the cave but never find the Crystal.")
+        elif choice3 == "hide":
+            print("\nA giant spider finds you.")
             print("GAME OVER!")
         else:
             print("\nInvalid choice. You get lost forever.")
             print("GAME OVER!")
 
     else:
-        print("\nInvalid choice. You cannot find your way.")
+        print("\nInvalid choice. You remain trapped in the cave.")
         print("GAME OVER!")
 
-# ------------------ INVALID FIRST CHOICE ------------------
+# ---------------- RIVER ----------------
+elif choice1 == "river":
+    print("\nYou arrive at a wide river.")
+
+    choice2 = input("Do you SWIM across or BUILD a raft? ").lower()
+
+    if choice2 == "swim":
+        print("\nHalfway across, you find a treasure chest.")
+
+        choice3 = input("Do you OPEN it or IGNORE it? ").lower()
+
+        if choice3 == "open":
+            print("\nInside is the Crystal of Destiny!")
+            print("YOU WIN!")
+        elif choice3 == "ignore":
+            print("\nYou safely reach the other side, but miss the treasure.")
+            print("GAME OVER!")
+        else:
+            print("\nInvalid choice. The current carries you away.")
+            print("GAME OVER!")
+
+    elif choice2 == "build":
+        print("\nYour raft reaches a mysterious island.")
+
+        choice3 = input("Do you EXPLORE the island or RETURN home? ").lower()
+
+        if choice3 == "explore":
+            print("\nYou discover the Crystal hidden in an ancient temple!")
+            print("YOU WIN!")
+        elif choice3 == "return home":
+            print("\nYou return home safely without the Crystal.")
+            print("GAME OVER!")
+        else:
+            print("\nInvalid choice. Your raft sinks.")
+            print("GAME OVER!")
+
+    else:
+        print("\nInvalid choice. The river current sweeps you away.")
+        print("GAME OVER!")
+
+# ---------------- INVALID FIRST CHOICE ----------------
 else:
-    print("\nInvalid entrance choice.")
-    print("Please restart the game and choose FRONT, SIDE, or BACK.")
+    print("\nInvalid choice.")
+    print("Please restart the game and choose FOREST, CAVE, or RIVER.")
